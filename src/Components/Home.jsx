@@ -7,12 +7,14 @@ import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
 import mainimg from '../assets/mainimage/mainimg.png';
+import About from './About';
+import Contact from './Contact';
 const Home = () => {
   return (
     <div >
       {/* style={{ backgroundImage: `url(${bgimage1})` }} */}
       <section 
-  className="min-h-screen bg-cover bg-center bg-no-repeat bg-[#C7D9DD] "
+  className="min-h-screen bg-cover bg-center bg-no-repeat bg-[#C7D9DD] " style={{ fontFamily: 'Rajdhani, sans-serif' }}
   
 >
 
@@ -29,7 +31,7 @@ const Home = () => {
 
         <h3 className='text-[rgb(220, 220, 228)] text-2xl md:text-3xl font-bold'  >Frontend  <span className='text-[#342ead]'> Web Developer</span></h3>
 
-        <p>I build all kinds of websites that help businesses scale and meet their needs. <br />I specialize in frontend web development, creating responsive and dynamic user interfaces. <br /> Currently, I'm living in Rawalpindi, Pakistan.</p>
+        <p className='text-black font-semibold'>I build all kinds of websites that help businesses scale and meet their needs. <br />I specialize in frontend web development, creating responsive and dynamic user interfaces. <br /> Currently, I'm living in Rawalpindi, Pakistan.</p>
         
         <div className='social-icons flex space-x-4 text-3xl md:text-3xl '> 
             <a href='https://www.linkedin.com/in/muhammad-shahzaib-0b1a6a1b8/' target='_blank' rel='noreferrer'>
@@ -48,7 +50,7 @@ const Home = () => {
 
         </div>
         <div className='flex space-x-4 items-center'>
-        <button type="button" className="text-white bg-[#FF6d5A] hover:bg-[#FF6d5A] cursor-pointer hover:scale-110   focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Download CV</button>
+        <button type="button" className="text-white bg-[#FF6d5A] hover:bg-[#FF6d5A] cursor-pointer hover:scale-110  text-xl focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold font-medium rounded-lg text-sm px-6 py-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Download CV</button>
         <a href="" className='text-[#342ead] underline text-xl' > Lets Talk</a>
         </div>
         </div>
@@ -68,6 +70,12 @@ const Home = () => {
 </div>
     </div>
 
+      </section>
+      <section id='about' >
+        <About />
+     </section>  
+     <section id='contact' >
+      <Contact/>
       </section>
     </div>
   );

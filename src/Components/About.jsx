@@ -8,6 +8,15 @@ import { i } from 'framer-motion/client';
 import { motion } from "framer-motion";
 import bgimage4 from '../assets/bg/expert_img_two.jpg';
 
+import { useLocation } from 'react-router-dom';
+
+
+
+
+
+ 
+
+
 const educationdata=[
     {
         id:1,
@@ -73,13 +82,16 @@ const technicalSkills=[
   
   
 const About = () => {
+   const location= useLocation();
 
-
+    
   return (
     
     <>
     <section className=''>
+    {location.pathname === "/about" && (  
     <div 
+
   className="" 
   style={{ 
     // backgroundImage: `url(${bgimage1})`,
@@ -93,9 +105,10 @@ const About = () => {
   About Me
 </h1>
 </div>
+    )}
 
        
-<div className='container px-10 py-15 mx-auto flex flex-col items-center justify-center md:flex-row  space-x-20 ' style={{fontFamily:'jost, sans-serif'}}>
+<div className='container px-10 py-15 mx-auto flex flex-col items-center justify-center md:flex-row  space-x-20 ' style={{ fontFamily: 'Rajdhani, sans-serif' }}>
     <div>
 <img src={bgimage2} alt="" />
     </div>
@@ -273,18 +286,18 @@ const About = () => {
 </div> */}
       
 <div className="min-h-screen flex flex-col  p-5 py-20 w-full " >
-  <h1 className="text-3xl md:text-5xl font-bold px-20">
-    I'm great in what I do <br /> and &nbsp; 
-    <span className="text-[#ff6d5a]" style={{ fontFamily: 'jost, sans-serif' }}>
+  <h1 className="text-3xl md:text-5xl font-bold px-5" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+    I'm great in what I do  and &nbsp; 
+    <span className="text-[#ff6d5a]" >
        I'm Loving it
     </span>
   </h1>
 
-  <div className="flex flex-col md:flex-row w-full items-start justify-center gap-40 mt-10">
+  <div className="flex flex-col md:flex-row w-full items-start justify-center gap-40 mt-10" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
       {/* Skills Section */}
       <div className="skills w-full md:w-1/3">
         <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: "jost, sans-serif" }}>
-          Skills
+         Development Skills
         </h1>
         {technicalSkills.map((skill, index) => (
           <div key={index} className="mb-4">
@@ -307,8 +320,7 @@ const About = () => {
       {/* Tools and Technologies Section */}
       <div className="tools w-full md:w-1/3">
         <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: "jost, sans-serif" }}>
-          Tools & Technologies
-        </h1>
+          Tools & Technologies        </h1>
         {toolsAndTechnologies.map((tool, index) => (
           <div key={index} className="mb-4">
             <div className="flex justify-between">
@@ -327,19 +339,20 @@ const About = () => {
         ))}
       </div>
     </div>
-  <div className="bg-white w-full md:w-full grid grid-cols-1 md:grid-cols-2  pt-10 p-4 space-y-4 gap-3">
+    <h1 className="text-3xl md:text-4xl font-bold px-4" style={{ fontFamily: 'Rajdhani, sans-serif' }}>Education</h1>
+  <div className="bg-white w-full md:w-full grid grid-cols-1 md:grid-cols-2   p-4 space-y-2 gap-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
       {educationdata.map((education, index) => (
         <SpotlightCard key={index} className="w-full h-full bg-[#F4F4F4] cursor-pointer border-animation">
           <div className="flex flex-col space-y-3">
             <h2 className="text-[#141414] font-semibold text-2xl">{education.title}</h2>
             <p className="text-black font-bold text-md">{education.year}</p>
             <p className="text-black text-md">{education.degree}</p>
-            <p className="text-[#5d6570] text-md">{education.desc}</p>
+            <p className="text-grey-100 text-md">{education.desc}</p>
           </div>
         </SpotlightCard>
       ))}
     </div>
-    <div className="flex justify-center items-center gap-5 flex-col p-2 md:flex-row w-full">
+    <div className="flex justify-center items-center gap-5 flex-col p-2 md:flex-row w-full" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
   {/* Image Section */}
   <div className="flex justify-center w-full md:w-1/2 ">
     <img src={bgimage4} alt="Experience Image" className="w-[540px]" />
@@ -348,13 +361,13 @@ const About = () => {
   {/* Experience Section */}
   <div className="w-full md:w-1/2">
     <h1 className="text-3xl md:text-4xl font-bold mt-5 text-[#141414]" style={{ fontFamily: 'jost, sans-serif' }}>
-      Experience
+      Experiences
     </h1>
 
-    {/* Junior Software Engineer */}
+    {/* Junior Software Engineer */} 
     {experienceData.map((experience, index) => (
         <div key={index} className="mt-6">
-        <h3 className="text-[#B5B5c0]">{experience.role}</h3>
+        <h3 className="text-[ #7d7d80] font-bold">{experience.role}</h3>
         <p className="text-[#FF6D5A] text-lg font-semibold">{experience.company}</p>
         <p className="text-[#141414] text-md font-semibold">{experience.duration}</p>
         <p>
