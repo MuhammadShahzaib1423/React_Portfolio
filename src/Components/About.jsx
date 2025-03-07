@@ -1,95 +1,92 @@
-// import React, { useState } from "react";
+
 import bgimage1 from '../assets/bg/hero_bg_4.png'
 import bgimage2 from '../assets/bg/hero_bg_2.png'
 import bgimage3 from '../assets/bg/skills_shape_1.png'
+import SpotlightCard from './spotlightcard';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaGraduationCap, FaSchool } from 'react-icons/fa';
+import { i } from 'framer-motion/client';
+import { motion } from "framer-motion";
+import bgimage4 from '../assets/bg/expert_img_two.jpg';
+
+const educationdata=[
+    {
+        id:1,
+        title:'NUTECH University',
+        degree:'BS in Computer Science',
+        year:'2020-2024',
+        desc:' I completed my BS in Computer Science from NUTECH University (2020-2024), where I developed a strong foundation in programming, software development, and problem-solving.  ',
+        icon:<FaGraduationCap/>
+    }
+    ,
+    {
+        id:2,
+        title:'Punjab Group Of Colleges Rawalpindi, D9 Campus',
+        degree:'ICS',
+        year:'2018-2020',
+        desc:'I completed my ICS from Punjab Group of Colleges, Rawalpindi, D9 Campus (2018-2020), where I built a solid foundation in computer science and problem-solving. ',
+        icon:<FaSchool/>
+    },
+    {
+        id:3,
+        title:'Islamic Foundation Secondary School',
+        degree:'Matric',
+        year:'2016-2018',
+        desc:'I completed my Matric from Islamic Foundation Secondary School (2016-2018), where I developed a passion for computer science and technology. ',
+        icon:<FaSchool/>
+    }
+];
+const technicalSkills=[
+    { name: 'React', percentage: '60%' },
+    { name: 'JavaScript', percentage: '50%' },
+    { name: 'Tailwind CSS', percentage: '70%' },
+    { name: 'Angular', percentage: '50%' },
+    { name: 'Bootstrap CSS', percentage: '70%' },
+    { name: 'Microsoft Suite', percentage: '50%' },
+  ];
+  const toolsAndTechnologies = [
+    { name: 'Git & GitHub', percentage: '55%' },
+    { name: 'VS Code', percentage: '70%' },
+    { name: 'Postman', percentage: '60%' },
+    { name: 'Figma', percentage: '60%' },
+    {name:'VirtualBox',percentage:'50%'},
+    {name:'Cisco Packet Tracer',percentage:'70%'}
+
+  ];
+  const experienceData = [
+    {
+        id:1,
+      role: "Junior Software Engineer",
+      company: "Smart TechOne",
+      duration: "8-July-2024 to Present",
+      description:
+        "As a Junior Software Engineer at Smart TechOne, I develop and optimize web applications using Angular, React, JavaScript, and Tailwind CSS. I collaborate with teams to enhance UI/UX, debug issues, and implement best practices for scalable solutions. This role allows me to refine my skills and contribute to innovative projects.",
+    },
+    {
+        id:2,
+      role: "Frontend Developer Intern",
+      company: "Pakistan International Airlines",
+      duration: "15-Aug-2023 to 29-Sep-2023",
+      description:
+        "As a Frontend Developer Intern, I worked on designing and developing small web pages using HTML, CSS, JavaScript, and Tailwind CSS. I assisted in improving UI components, ensuring responsiveness, and enhancing user experience. This internship helped me gain practical experience in frontend development and modern web technologies.",
+    },
+  ];
+  
+  
 const About = () => {
-//   const [activeTab, setActiveTab] = useState("about"); // Default tab: About Me
+
 
   return (
-    // <div className=" mx-auto mt-10 p-6">
     
-    //   <div className="flex justify-center space-x-4 mb-6">
-    //     <button
-    //       className={`px-4 py-2 rounded-lg ${
-    //         activeTab === "about" ? "bg-blue-600 text-white" : "bg-gray-300"
-    //       }`}
-    //       onClick={() => setActiveTab("about")}
-    //     >
-    //       About Me
-    //     </button>
-    //     <button
-    //       className={`px-4 py-2 rounded-lg ${
-    //         activeTab === "skills" ? "bg-blue-600 text-white" : "bg-gray-300"
-    //       }`}
-    //       onClick={() => setActiveTab("skills")}
-    //     >
-    //       Skills
-    //     </button>
-    //     <button
-    //       className={`px-4 py-2 rounded-lg ${
-    //         activeTab === "experience" ? "bg-blue-600 text-white" : "bg-gray-300"
-    //       }`}
-    //       onClick={() => setActiveTab("experience")}
-    //     >
-    //       Experience
-    //     </button>
-    //   </div>
-
-    //   {activeTab === "about" && (
-    //     <div>
-    //       <h2 className="text-2xl font-bold mb-4">My Story</h2>
-    //       <p className="text-gray-700">
-    //         I am a frontend web developer based in Rawalpindi. I build all kinds of
-    //         websites that scale up company businesses and meet their needs.
-    //       </p>
-    //       <p className="text-gray-700 mt-2">
-    //         I have been passionate about web development since I was 18 years old.
-    //       </p>
-    //     </div>
-    //   )}
-
-    //   {activeTab === "skills" && (
-    //     <div>
-    //       <h2 className="text-2xl font-bold mb-4">Skills</h2>
-    //       <p className="text-gray-700">
-    //         Here are some of my technical skills and expertise.
-    //       </p>
-    //       <ul className="mt-4">
-    //         <li className="mb-2">Adobe Photoshop - 80%</li>
-    //         <li className="mb-2">HTML / CSS - 95%</li>
-    //         <li className="mb-2">JavaScript - 88%</li>
-    //       </ul>
-    //     </div>
-    //   )}
-
-      
-    //   {activeTab === "experience" && (
-    //     <div>
-    //       <h2 className="text-2xl font-bold mb-4">Experience</h2>
-    //       <p className="text-gray-700">My professional work history.</p>
-    //       <ul className="mt-4">
-    //         <li className="mb-2">
-    //           <strong>Art & Creative Director</strong> (2014-2015) - Google Inc.
-    //         </li>
-    //         <li className="mb-2">
-    //           <strong>Frontend Developer</strong> (2015-2017) - Google Inc.
-    //         </li>
-    //         <li className="mb-2">
-    //           <strong>UI/UX Designer</strong> (2018-2020) - Google Inc.
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   )}
-    // </div>
     <>
     <section className=''>
     <div 
   className="" 
   style={{ 
-    backgroundImage: `url(${bgimage1})`,  
-    height: "50vh",  // Corrected syntax
-    backgroundSize: "cover", // Optional: Makes background fit properly
-    backgroundPosition: "center" // Optional: Centers background image
+    // backgroundImage: `url(${bgimage1})`,
+    backgroundColor:"#C7D9DD",  
+    height: "50vh",  
+    backgroundSize: "cover", 
+    backgroundPosition: "center" 
   }}
 >
         <h1 className="text-9xl text-center font-bold bg-gradient-to-r from-[#342ead] to-[#ff6d5a] text-transparent bg-clip-text py-40">
@@ -107,7 +104,7 @@ const About = () => {
         <h1 className='md:text-4xl text-3xl text-[#12103E] font-bold mb-4'>
             I <span className='text-[#ff6d5a]'> develop websites  </span>that scale up businesses
         </h1>
-        <p className='text-[#B5B5c0] text-lg'>
+        <p className='text-[rgb(208, 208, 212)] text-lg'>
         I am a Frontend Web Developer passionate about creating responsive, user-friendly, and visually appealing web applications. I specialize in modern frontend technologies, ensuring seamless user experiences through clean code and innovative designs.
         </p>
         </div> 
@@ -136,7 +133,8 @@ const About = () => {
         </div>
          </div>
 </div>
-<div className='flex justify-center' style={{ backgroundImage: `url(${bgimage1}) ` }}>
+{/* backgroundImage: `url(${bgimage1}) ` */}
+{/* <div className='flex justify-center' style={{ backgroundColor: "#C7D9DD" }}>
 <div className="min-h-screen justify-center p-5  py-20 w-[70vw] " >
 
     <h1 className='text-3xl md:text-5xl font-bold '> I'm great in what I do <br />  and  <span className='text-[#ff6d5a]' style={{fontFamily:'jost, sans-serif'}}>I'm Loving it </span></h1>
@@ -156,7 +154,7 @@ const About = () => {
 
                 
                 <div>
-                <h2 className='text-xl text-[#B5B5c0]'>NUTECH University</h2>
+                <h2 className='text-lg text-[rgb(245, 245, 250)] font-semibold'>NUTECH University</h2>
                 <p className='text-2xl text-[#12103E] font-semibold ' style={{fontFamily:'jost, sans-serif'}}>BS in Computer Science &nbsp; (2020-2024)</p>
                 </div>
 
@@ -170,7 +168,7 @@ const About = () => {
                   </svg>
                 </div>
                 <div>
-                <h2 className='text-xl text-[#B5B5c0]'>Punjab Group Of Colleges Rawalpindi, D9 Campus</h2>
+                <h2 className='text-lg text-[rgb(245, 245, 250)] font-semibold'>Punjab Group Of Colleges Rawalpindi, D9 Campus</h2>
                 <p className='text-2xl text-[#12103E] font-semibold ' style={{fontFamily:'jost, sans-serif'}}>ICS &nbsp; (2018-2020)</p>
                 </div>
 
@@ -184,7 +182,7 @@ const About = () => {
                   </svg>
                 </div>
                 <div>
-                <h2 className='text-xl text-[#B5B5c0]'>Islamic Foundation Secondary School</h2>
+                <h2 className='text-lg text-[rgb(245, 245, 250)] font-semibold'>Islamic Foundation Secondary School</h2>
                 <p className='text-2xl text-[#12103E] font-semibold ' style={{fontFamily:'jost, sans-serif'}}>Matric &nbsp; (2016-2018)</p>
                 </div>
 
@@ -272,8 +270,112 @@ const About = () => {
 <div>
     <img src={bgimage3} alt="" className='w-[200px] float-animation' />
 </div>
+</div> */}
+      
+<div className="min-h-screen flex flex-col  p-5 py-20 w-full " >
+  <h1 className="text-3xl md:text-5xl font-bold px-20">
+    I'm great in what I do <br /> and &nbsp; 
+    <span className="text-[#ff6d5a]" style={{ fontFamily: 'jost, sans-serif' }}>
+       I'm Loving it
+    </span>
+  </h1>
+
+  <div className="flex flex-col md:flex-row w-full items-start justify-center gap-40 mt-10">
+      {/* Skills Section */}
+      <div className="skills w-full md:w-1/3">
+        <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: "jost, sans-serif" }}>
+          Skills
+        </h1>
+        {technicalSkills.map((skill, index) => (
+          <div key={index} className="mb-4">
+            <div className="flex justify-between">
+              <h2 className="text-lg font-medium">{skill.name}</h2>
+              <h1 className="text-sm font-semibold">{skill.percentage}</h1>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2.5 mt-1 overflow-hidden">
+              <motion.div
+                className="bg-[#ff6d5a] h-2.5 rounded-full"
+                initial={{ width: "0%" }}
+                animate={{ width: skill.percentage }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+              ></motion.div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Tools and Technologies Section */}
+      <div className="tools w-full md:w-1/3">
+        <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: "jost, sans-serif" }}>
+          Tools & Technologies
+        </h1>
+        {toolsAndTechnologies.map((tool, index) => (
+          <div key={index} className="mb-4">
+            <div className="flex justify-between">
+              <h2 className="text-lg font-medium">{tool.name}</h2>
+              <h1 className="text-sm font-semibold">{tool.percentage}</h1>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2.5 mt-1 overflow-hidden">
+              <motion.div
+                className="bg-[#ff6d5a] h-2.5 rounded-full"
+                initial={{ width: "0%" }}
+                animate={{ width: tool.percentage }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+              ></motion.div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  <div className="bg-white w-full md:w-full grid grid-cols-1 md:grid-cols-2  pt-10 p-4 space-y-4 gap-3">
+      {educationdata.map((education, index) => (
+        <SpotlightCard key={index} className="w-full h-full bg-[#F4F4F4] cursor-pointer border-animation">
+          <div className="flex flex-col space-y-3">
+            <h2 className="text-[#141414] font-semibold text-2xl">{education.title}</h2>
+            <p className="text-black font-bold text-md">{education.year}</p>
+            <p className="text-black text-md">{education.degree}</p>
+            <p className="text-[#5d6570] text-md">{education.desc}</p>
+          </div>
+        </SpotlightCard>
+      ))}
+    </div>
+    <div className="flex justify-center items-center gap-5 flex-col p-2 md:flex-row w-full">
+  {/* Image Section */}
+  <div className="flex justify-center w-full md:w-1/2 ">
+    <img src={bgimage4} alt="Experience Image" className="w-[540px]" />
+  </div>
+
+  {/* Experience Section */}
+  <div className="w-full md:w-1/2">
+    <h1 className="text-3xl md:text-4xl font-bold mt-5 text-[#141414]" style={{ fontFamily: 'jost, sans-serif' }}>
+      Experience
+    </h1>
+
+    {/* Junior Software Engineer */}
+    {experienceData.map((experience, index) => (
+        <div key={index} className="mt-6">
+        <h3 className="text-[#B5B5c0]">{experience.role}</h3>
+        <p className="text-[#FF6D5A] text-lg font-semibold">{experience.company}</p>
+        <p className="text-[#141414] text-md font-semibold">{experience.duration}</p>
+        <p>
+          {experience.description}
+        </p>
+      </div>
+    ))}
+    
+  
+  </div>
 </div>
-       
+
+
+    
+</div>
+
+
+
+
+
+
     </section>
 
     </>

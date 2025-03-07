@@ -10,15 +10,16 @@ import mainimg from '../assets/mainimage/mainimg.png';
 const Home = () => {
   return (
     <div >
+      {/* style={{ backgroundImage: `url(${bgimage1})` }} */}
       <section 
-  className="min-h-screen bg-cover bg-center bg-no-repeat "
-  style={{ backgroundImage: `url(${bgimage1})` }}
+  className="min-h-screen bg-cover bg-center bg-no-repeat bg-[#C7D9DD] "
+  
 >
 
     <div className='container  py-15 mx-auto flex flex-col-reverse p-8 md:flex-row justify-center items-center space-x-9'>
 
         <div className='space-y-8 w-[50]'>
-            <h1 className='text-3xl md:text-5xl text-[#B5B5c0]'> Hi! I'm</h1>
+            <h1 className='text-3xl md:text-5xl text-[rgb(210, 210, 214)] font-semibold'> Hi! I'm</h1>
         <h2 
             className="text-3xl font-bold md:text-5xl  text-transparent bg-clip-text"
             style={{ backgroundImage: "linear-gradient(147deg, #342ead 0%,rgb(250, 54, 28) 100%)" }}
@@ -26,7 +27,7 @@ const Home = () => {
             Muhammad <br />Shahzaib
             </h2>
 
-        <h3 className='text-[#B5B5c0] text-2xl md:text-3xl font-bold'  >Frontend  <span className='text-[#342ead]'> Web Developer</span></h3>
+        <h3 className='text-[rgb(220, 220, 228)] text-2xl md:text-3xl font-bold'  >Frontend  <span className='text-[#342ead]'> Web Developer</span></h3>
 
         <p>I build all kinds of websites that help businesses scale and meet their needs. <br />I specialize in frontend web development, creating responsive and dynamic user interfaces. <br /> Currently, I'm living in Rawalpindi, Pakistan.</p>
         
