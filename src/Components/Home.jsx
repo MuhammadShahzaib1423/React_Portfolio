@@ -22,7 +22,7 @@ const Home = () => {
   
 >
 
-    <div className='container  py-15 mx-auto flex flex-col-reverse p-8 md:flex-row justify-between items-center space-x-2'>
+    <div className='container  py-15 flex flex-col-reverse p-8 md:flex-row justify-center items-center space-x-2'>
 
         <div className='space-y-8 w-[50]'>
             <h1 className='text-3xl md:text-5xl text-[rgb(210, 210, 214)] font-semibold'> Hi! I'm</h1>
