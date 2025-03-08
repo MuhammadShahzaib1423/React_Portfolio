@@ -59,7 +59,12 @@ const Home = () => {
 </div>
 
         <div className='flex space-x-4 items-center'>
-        <button type="button" className="text-white bg-[#FF6d5A] hover:bg-[#FF6d5A] cursor-pointer hover:scale-110  text-xl focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold font-medium rounded-lg text-sm px-6 py-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Download CV</button>
+        <a href="https://drive.google.com/file/d/1W3Z5b6laWJgpas2_xCDHvkG1up4lwxAo/view?usp=drive_link" download>
+  <button type="button" className="text-white bg-[#FF6d5A] hover:bg-[#FF6d5A] cursor-pointer hover:scale-110 text-xl focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-sm px-6 py-4 text-center">
+    Download CV
+  </button>
+</a>
+
         <a href="" className='text-[#342ead] underline text-xl' > Lets Talk</a>
         </div>
         </div>
