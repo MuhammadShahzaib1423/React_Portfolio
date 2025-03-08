@@ -24,7 +24,7 @@ const Home = () => {
 
     <div className=' w-full py-15 flex flex-col-reverse md:flex-row justify-around items-center space-x-2'>
 
-        <div className='space-y-8 w-[50%]'>
+        <div className='space-y-8 w-[50%] md:w-1/2'>
             <h1 className='text-3xl md:text-5xl text-[rgb(210, 210, 214)] font-semibold'> Hi! I'm</h1>
         <motion.h2  initial={{ opacity: 0, y: 50 }} 
   animate={{ opacity: 1, y: 0 }} 
