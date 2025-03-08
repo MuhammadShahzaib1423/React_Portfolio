@@ -16,7 +16,7 @@
       transform:translateY(20px);
     }
     50% {
-      transform: translateY(80px);
+      transform: translateY(50px);
     }
     100% {
       transform: translateY(px);
@@ -33,4 +33,13 @@
   100% {
     transform: rotate(360deg);
   }
+}
+.social-icon {
+  color: #342ead;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: translateY(-10px); 
+  color: #ff6d5a; 
 }

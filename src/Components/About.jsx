@@ -11,7 +11,7 @@ import bgimage4 from '../assets/bg/expert_img_two.jpg';
 import { useLocation } from 'react-router-dom';
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-
+import dimage from '../assets/bg/dimage.jpg';
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: (delay) => ({
@@ -123,9 +123,14 @@ const About = () => {
 
        
 <div className='container px-10 py-15 mx-auto flex flex-col items-center justify-center md:flex-row  space-x-20 ' style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-    <div>
-<img src={bgimage2} alt="" />
-    </div>
+< motion.div initial={{ opacity: 0, y: 50 }}
+ref={aboutref}
+animate={ aboutinview ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+ 
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }} className=''>
+  <img src={dimage} alt="" className='w-[800px]' />
+</motion.div>
+
     <div>
     <motion.div 
   initial={{ opacity: 0, y: 50 }}
