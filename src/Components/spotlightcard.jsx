@@ -34,7 +34,7 @@ const SpotlightCard = ({
   const handleMouseLeave = () => {
     setOpacity(0);
   };
-
+   
   // Update border angle every 50ms for smooth rotation
   useEffect(() => {
     const interval = setInterval(() => {

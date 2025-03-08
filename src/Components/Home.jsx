@@ -9,6 +9,8 @@ import { FaFacebook } from 'react-icons/fa';
 import mainimg from '../assets/mainimage/mainimg.png';
 import About from './About';
 import Contact from './Contact';
+import { motion } from 'framer-motion';
+import Projects from './Projects';
 const Home = () => {
   return (
     <div >
@@ -18,32 +20,38 @@ const Home = () => {
   
 >
 
-    <div className='container  py-15 mx-auto flex flex-col-reverse p-8 md:flex-row justify-center items-center space-x-9'>
+    <div className='container  py-15 mx-auto flex flex-col-reverse p-8 md:flex-row justify-between items-center space-x-2'>
 
         <div className='space-y-8 w-[50]'>
             <h1 className='text-3xl md:text-5xl text-[rgb(210, 210, 214)] font-semibold'> Hi! I'm</h1>
-        <h2 
+        <motion.h2  initial={{ opacity: 0, y: 50 }} 
+  animate={{ opacity: 1, y: 0 }} 
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
             className="text-3xl font-bold md:text-5xl  text-transparent bg-clip-text"
             style={{ backgroundImage: "linear-gradient(147deg, #342ead 0%,rgb(250, 54, 28) 100%)" }}
             >
             Muhammad <br />Shahzaib
-            </h2>
+            </motion.h2>
 
-        <h3 className='text-[rgb(220, 220, 228)] text-2xl md:text-3xl font-bold'  >Frontend  <span className='text-[#342ead]'> Web Developer</span></h3>
+        <motion.h3 initial={{ opacity: 0, y: 50 }} 
+  animate={{ opacity: 1, y: 0 }} 
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }} className='text-[rgb(220, 220, 228)] text-2xl md:text-3xl font-bold'  >Frontend  <span className='text-[#342ead]'> Web Developer</span></motion.h3>
 
-        <p className='text-black font-semibold'>I build all kinds of websites that help businesses scale and meet their needs. <br />I specialize in frontend web development, creating responsive and dynamic user interfaces. <br /> Currently, I'm living in Rawalpindi, Pakistan.</p>
+        <motion.p initial={{ opacity: 0, y: 50 }} 
+  animate={{ opacity: 1, y: 0 }} 
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }} className='text-black font-semibold'>I build all kinds of websites that help businesses scale and meet their needs. <br />I specialize in frontend web development, creating responsive and dynamic user interfaces. <br /> Currently, I'm living in Rawalpindi, Pakistan.</motion.p>
         
         <div className='social-icons flex space-x-4 text-3xl md:text-3xl '> 
-            <a href='https://www.linkedin.com/in/muhammad-shahzaib-0b1a6a1b8/' target='_blank' rel='noreferrer'>
+            <a href='https://www.instagram.com/shahzaib1___' target='_blank' rel='noreferrer'>
                 <FaInstagram className='text-[#342ead] hover:text-[#ff6d5a]' />
             </a>
-            <a href=' https://github.com/MuhammadShahzaib' target='_blank' rel='noreferrer'>
+            <a href='https://github.com/MuhammadShahzaib1423' target='_blank' rel='noreferrer'>
                 <FaGithub className='text-[#342ead] hover:text-[#ff6d5a]'  />
                 </a>
-            <a href='https://www.linkedin.com/in/muhammad-shahzaib-0b1a6a1b8/' target='_blank' rel='noreferrer'>
+            <a href='https://www.linkedin.com/in/m-shahzaib-30b550244/' target='_blank' rel='noreferrer'>
                 <FaLinkedin className='text-[#342ead] hover:text-[#ff6d5a]' />
                 </a>
-            <a href='https://www.facebook.com/muhammad.shahzaib.923724' target='_blank' rel='noreferrer'>
+            <a href='https://www.facebook.com/shahzaib.rashid.35513' target='_blank' rel='noreferrer'>
             <FaFacebook className='text-[#342ead] hover:text-[#ff6d5a]' />
             </a>
                 
@@ -71,11 +79,15 @@ const Home = () => {
     </div>
 
       </section>
-      <section id='about' >
+    
+      <section id='about'         >
         <About />
      </section>  
      <section id='contact' >
       <Contact/>
+      </section>
+      <section id='projects' >
+      <Projects/>
       </section>
     </div>
   );
