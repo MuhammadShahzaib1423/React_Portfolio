@@ -34,7 +34,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="min-h-screen bg-cover bg-center bg-no-repeat bg-[#C7D9DD] " style={{ fontFamily: 'Rajdhani, sans-serif' }}>
         <div className="w-full py-15 flex flex-col-reverse md:flex-row justify-around items-center space-x-2">
-          <div className="space-y-8 px-5 w-full md:w-1/2">
+          <div className="space-y-8 px-12 w-full md:w-1/2">
             <h1 className="text-3xl md:text-5xl text-[rgb(210, 210, 214)] font-semibold"> Hi! I'm</h1>
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
@@ -112,7 +112,7 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           onClick={scrollToTop}
-          className="fixed bottom-5  cursor-pointer right-5 bg-[#FF6d5A] text-white p-4 rounded-full shadow-lg hover:bg-[#e55b47] hover:scale-110 transition-transform duration-300"
+          className="fixed bottom-5  cursor-pointer right-10 bg-[#FF6d5A] text-white p-4 rounded-full shadow-lg hover:bg-[#e55b47] hover:scale-110 transition-transform duration-300"
         >
           <FaArrowUp size={24} />
         </motion.button>

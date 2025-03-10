@@ -168,7 +168,7 @@ const About = () => {
   {features.map((feature) => (
     <div
       
-      className="shadow-lg rounded-2xl p-6 w-86 transform transition-all duration-300 hover:scale-105 hover:shadow-xl bg-[#444359]"
+      className="shadow-lg rounded-2xl p-6 w-86 transform transition-all duration-300 hover:scale-105  hover:shadow-xl bg-[#C7D9DD]"
     >
       {/* Top Section: ID, Title & Image */}
       <div className="flex justify-between items-start gap-2">
@@ -182,7 +182,7 @@ const About = () => {
       </div>
 
       {/* Description */}
-      <p className="text-gray-500 mt-4" id='one'>{feature.description}</p>
+      <p className="text-black-500 mt-4" id='one'>{feature.description}</p>
     </div>
   ))}
 </motion.div>
@@ -264,7 +264,7 @@ animate={ aboutinview ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
   </span>
 </motion.h1>
 
-  <div className="flex flex-col  md:flex-row w-full items-start justify-center gap-40 mt-10" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+  <div className="flex flex-col  md:flex-row w-full items-start justify-center gap-10 md:gap-40 mt-10" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
       {/* Skills Section */}
 <motion.div 
       ref={skillsRef}
@@ -274,16 +274,16 @@ animate={ aboutinview ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
   custom={0.2} // First section appears after 0.2s
   variants={sectionVariants}
 >
-  <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: "jost, sans-serif" }} id='one'>
+  <h1 className="text-3xl md:text-4xl font-bold mb-6 p-4" style={{ fontFamily: "jost, sans-serif" }} id='one'>
     Development Skills
   </h1>
   {technicalSkills.map((skill, index) => (
-    <div key={index} className="mb-4">
-      <div className="flex justify-between md:w-full w-[85vw]">
+    <div key={index} className="mb-1 px-8 p-2 md:px-0   ">
+      <div className="flex justify-between md:w-full w-[72vw] ">
         <h2 className="text-lg font-medium">{skill.name}</h2>
         <h1 className="text-sm font-semibold">{skill.percentage}</h1>
       </div>
-      <div className="md:w-full w-[85vw] bg-gray-200 rounded-full h-2.5 mt-1 overflow-hidden">
+      <div className="md:w-full w-[72vw] bg-gray-200 rounded-full h-2.5 mt-1 overflow-hidden">
         <motion.div
           className="bg-[#ff6d5a] h-2.5 rounded-full"
           initial={{ width: "0%" }}
@@ -303,18 +303,18 @@ animate={ aboutinview ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
   custom={0.5} 
   variants={sectionVariants}
 >
-  <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: "jost, sans-serif" }} id='one'>
+  <h1 className="text-3xl md:text-4xl p-4 font-bold mb-6" style={{ fontFamily: "jost, sans-serif" }} id='one'>
     Tools & Technologies
   </h1>
   {toolsAndTechnologies.map((tool, index) => (
-    <div key={index} className="mb-4">
-      <div className="flex justify-between md:w-full w-[85vw]">
+    <div key={index} className="mb-1 px-8 p-2 md:px-0 ">
+      <div className="flex justify-between md:w-full w-[72vw] ">
         <h2 className="text-lg font-medium">{tool.name}</h2>
         <h1 className="text-sm font-semibold">{tool.percentage}</h1>
       </div>
-      <div className="md:w-full w-[85vw] bg-gray-200 rounded-full h-2.5 mt-1 overflow-hidden">
+      <div className="md:w-full w-[72vw]  bg-gray-200 rounded-full h-2.5 mt-1 overflow-hidden">
         <motion.div
-          className="bg-[#ff6d5a] h-2.5 rounded-full"
+          className="bg-[#ff6d5a]  h-2.5 rounded-full"
           initial={{ width: "0%" }}
           animate={{ width: tool.percentage }}
           transition={{ duration: 1.5, ease: "easeOut" }}
@@ -334,7 +334,7 @@ animate={ aboutinview ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
    animate={educationInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
    transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
 
- className="  md:w-full grid grid-cols-1 md:grid-cols-2  p-2 space-y-2 gap-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+ className="  md:w-full grid grid-cols-1 md:grid-cols-2  p-4 space-y-2 gap-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
       {educationdata.map((education, index) => (
         <SpotlightCard key={index} className="w-full h-full bg-[#F4F4F4] cursor-pointer border-animation ">
           <div className="flex flex-col space-y-3">

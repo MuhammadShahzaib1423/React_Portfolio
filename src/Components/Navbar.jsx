@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full z-20 top-0 px-2 start-0 border-gray-200 dark:border-gray-600 
+      className={`w-full z-20 top-0 px-4 md:px-2 start-0 border-gray-200 dark:border-gray-600 
       ${isDarkMode ? "bg-gray-900" : "bg-transparent"}`}
       style={{ fontFamily: "Rajdhani, sans-serif" }}
     >
