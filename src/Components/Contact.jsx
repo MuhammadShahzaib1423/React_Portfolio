@@ -60,7 +60,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <div className='p-4'>
      
       {location.pathname === "/contact" && (  
     <div 
@@ -98,7 +98,7 @@ const Contact = () => {
         <section className="mx-auto max-w-4xl flex flex-col mb-20 bg-[#F4F4F4] md:flex-row border border-gray-300 shadow-xl rounded-lg overflow-hidden min-h-[400px] mt-0">
           <div className="w-full md:w-1/2 p-6 flex flex-col space-y-5">
             <h2 className="text-2xl font-bold mb-4" style={{ color: "rgb(248, 82, 61)" }}>Get in Touch</h2>
-            <h1 className='text-4xl font-bold'>Let’s Build Something Amazing Together</h1>
+            <h1 className='text-4xl font-bold text-black' >Let’s Build Something Amazing Together</h1>
             <p className='text-black text-md font-semibold'>
               I'm always open to new opportunities, collaborations, or just a friendly chat. 
               If you have a project in mind or need a creative touch, feel free to reach out—I’d love to hear from you!
@@ -114,7 +114,7 @@ const Contact = () => {
                   placeholder="Name" 
                   value={formData.name} 
                   onChange={handleChange} 
-                  className="w-1/2 p-3 border border-gray-300 rounded-md" 
+                  className="w-1/2 p-3 border border-gray-300 rounded-md text-black" 
                   required 
                 />
                 <input 
@@ -123,7 +123,7 @@ const Contact = () => {
                   placeholder="Email" 
                   value={formData.email} 
                   onChange={handleChange} 
-                  className="w-1/2 p-3 border border-gray-300 rounded-md" 
+                  className="w-1/2 p-3 border border-gray-300 rounded-md text-black" 
                   required 
                 />
               </div>
@@ -134,7 +134,7 @@ const Contact = () => {
                   placeholder="Subject" 
                   value={formData.subject} 
                   onChange={handleChange} 
-                  className="w-full p-3 border border-gray-300 rounded-md" 
+                  className="w-full p-3 border border-gray-300 rounded-md text-black" 
                   required 
                 />
               </div>
@@ -144,12 +144,12 @@ const Contact = () => {
                   placeholder="Message" 
                   value={formData.message} 
                   onChange={handleChange} 
-                  className="w-full p-3 border border-gray-300 rounded-md" 
+                  className="w-full p-3 border border-gray-300 rounded-md text-black" 
                   required
                 ></textarea>
               </div>
               <div>
-                <button type="submit" className="w-full bg-[#ff6d5a] text-white p-3 rounded-md cursor-pointer hover:bg-[#fc381e]">
+                <button type="submit" className="w-full bg-[#ff6d5a] text-white text-xl p-3 rounded-md  font-bold cursor-pointer hover:bg-[#fc381e]">
                   Submit
                 </button>
               </div>
@@ -158,7 +158,7 @@ const Contact = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

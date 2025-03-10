@@ -52,9 +52,9 @@ const SpotlightCard = ({
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative rounded-3xl border border-transparent bg-[#f4f4f4] p-8 overflow-hidden transition-all duration-500 group ${className}`}
+      className={`relative rounded-3xl border border-transparent bg-[#f4f4f4] p-8 overflow-hidden transition-all duration-500 group  ${className}` }
       style={{
-        background: `linear-gradient(45deg,rgb(240, 244, 250) 50%,rgb(255, 255, 255)) padding-box, 
+        background: `linear-gradient(45deg,rgba(68, 67, 89, 1) 50%,rgb(56, 55, 59) padding-box, 
                      conic-gradient(from ${borderAngle}deg, rgba(145, 183, 236, 0.48) 80%, #ff6d5a 86%, 
                      #ff8a75 90%, #ff6d5a 94%, rgba(221, 230, 243, 0.48)) border-box`,
         borderRadius: "16px",
