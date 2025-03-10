@@ -71,13 +71,13 @@ const Home = () => {
               <a href="https://drive.google.com/file/d/1W3Z5b6laWJgpas2_xCDHvkG1up4lwxAo/view?usp=drive_link" download>
                 <button
                   type="button"
-                  className="text-white bg-[#FF6d5A] hover:bg-[#FF6d5A] cursor-pointer hover:scale-110 text-xl focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-sm px-6 py-4 text-center"
+                  className="text-white bg-[#FF6d5A] hover:bg-[#FF6d5A] cursor-pointer hover:scale-110 text-xl focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-sm md:px-6 md:py-4  px-4 py-2 text-center"
                 >
                   Download CV
                 </button>
               </a>
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-      <button className="whatsapp-btn text-xl text-white underline font-bold cursor-pointer font-semibold rounded-lg  px-6 py-4 text-center bg-blue-500 ">Let's Talk</button>
+      <button className="whatsapp-btn text-xl text-white underline font-bold cursor-pointer font-semibold rounded-lg  md:px-6 md:py-4 px-4 py-2 text-center bg-blue-500 ">Let's Talk</button>
     </a>
 
             </div>
