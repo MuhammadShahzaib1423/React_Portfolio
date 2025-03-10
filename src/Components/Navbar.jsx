@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/bg/logo2.svg";
-import DarkModeToggle from "./DarkModeToggle";
+import DarkModeToggle from "./DarkModetoggle.jsx";
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(
