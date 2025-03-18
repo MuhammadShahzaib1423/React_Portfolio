@@ -66,7 +66,7 @@ const Home = () => {
               I specialize in frontend web development, creating responsive and dynamic user interfaces. <br />
               Currently, I'm living in Rawalpindi, Pakistan.
             </motion.p>
-            <div className='social-icons flex space-x-4 text-3xl md:text-3xl'>
+            <div className='social-icons flex space-x-4 text-3xl md:text-3xl justify-center md:justify-start'>
   <a href='https://www.instagram.com/shahzaib1___' target='_blank' rel='noreferrer' className="hover:text-[#FF6d5A]  cursor-pointer hover:scale-110 transition-transform duration-300">
     <FaInstagram className='social-icon' />
   </a>
