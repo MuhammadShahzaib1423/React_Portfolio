@@ -254,12 +254,12 @@ animate={ aboutinview ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
   className="text-3xl md:text-5xl font-bold px-5" 
   style={{ fontFamily: 'Rajdhani, sans-serif' }}
   initial={{ opacity: 0, y: 50 }} 
-  animate={{ opacity: 1, y: 0 }} 
+  animate={{ opacity: 1, y: 0 }}  
   transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }} 
   id='one'
 >
   I'm great in what I do and &nbsp; 
-  <span className="text-[#ff6d5a]">
+  <span className="text-[#ff6d5a]"> 
     I'm Loving it
   </span>
 </motion.h1>

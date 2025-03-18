@@ -6,10 +6,11 @@ import dimage3 from "../assets/bg/dimage3.png";
 import About from "./About";
 import Contact from "./Contact";
 import Projects from "./Projects";
+import { FaInstagram, FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
-
+ 
   // Show button when user scrolls down
   useEffect(() => {
     const handleScroll = () => {
@@ -65,6 +66,20 @@ const Home = () => {
               I specialize in frontend web development, creating responsive and dynamic user interfaces. <br />
               Currently, I'm living in Rawalpindi, Pakistan.
             </motion.p>
+            <div className='social-icons flex space-x-4 text-3xl md:text-3xl'>
+  <a href='https://www.instagram.com/shahzaib1___' target='_blank' rel='noreferrer' className="hover:text-[#FF6d5A]  cursor-pointer hover:scale-110 transition-transform duration-300">
+    <FaInstagram className='social-icon' />
+  </a>
+  <a href='https://github.com/MuhammadShahzaib1423' target='_blank' rel='noreferrer' className="hover:text-[#FF6d5A]  cursor-pointer hover:scale-110 transition-transform duration-300">
+    <FaGithub className='social-icon' />
+  </a>
+  <a href='https://www.linkedin.com/in/m-shahzaib-30b550244/' target='_blank' rel='noreferrer' className="hover:text-[#FF6d5A]  cursor-pointer hover:scale-110 transition-transform duration-300">
+    <FaLinkedin className='social-icon' />
+  </a>
+  <a href='https://www.facebook.com/shahzaib.rashid.35513' target='_blank' rel='noreferrer' className="hover:text-[#FF6d5A]  cursor-pointer hover:scale-110 transition-transform duration-300" >
+    <FaFacebook className='social-icon' />
+  </a>
+      </div>
 
             {/* Buttons */}
             <div className="flex space-x-3  items-center">
